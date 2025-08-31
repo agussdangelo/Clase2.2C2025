@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorSistemaDeReservas", "InstaladorSistemaDeReservas\InstaladorSistemaDeReservas.vdproj", "{5E2C8EE1-6A20-0F44-416E-5160DA21C413}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E2C8EE1-6A20-0F44-416E-5160DA21C413}.Debug|Any CPU.ActiveCfg = Debug
+		{5E2C8EE1-6A20-0F44-416E-5160DA21C413}.Debug|Any CPU.Build.0 = Debug
+		{5E2C8EE1-6A20-0F44-416E-5160DA21C413}.Debug|Default.ActiveCfg = Debug
+		{5E2C8EE1-6A20-0F44-416E-5160DA21C413}.Debug|Default.Build.0 = Debug
+		{5E2C8EE1-6A20-0F44-416E-5160DA21C413}.Release|Any CPU.ActiveCfg = Release
+		{5E2C8EE1-6A20-0F44-416E-5160DA21C413}.Release|Any CPU.Build.0 = Release
+		{5E2C8EE1-6A20-0F44-416E-5160DA21C413}.Release|Default.ActiveCfg = Release
+		{5E2C8EE1-6A20-0F44-416E-5160DA21C413}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9530212B-9A05-48AD-AF06-586D717AAB41}
+	EndGlobalSection
+EndGlobal

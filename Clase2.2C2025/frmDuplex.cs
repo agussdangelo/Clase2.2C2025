@@ -1,3 +1,5 @@
+using Clase2._2C2025.Entidad;
+
 namespace Clase2._2C2025
 {
     public partial class frmDuplex : Form
@@ -34,13 +36,14 @@ namespace Clase2._2C2025
 
         private void btnGuardarDuplex_Click(object sender, EventArgs e)
         {
-            string fecha = mcFecha.SelectionStart.ToShortDateString();
-            string cliente = txtCliente.Text;
-            string duplex = cboNumeroDuplex.SelectedItem.ToString();
-            string cantidad = cboCantidadPersonas.SelectedItem.ToString();
-            string precio = txtPrecio.Text;
 
-            dgvDuplex.Rows.Add(fecha, cliente, duplex, cantidad, precio);
+            Duplex duplex = new Duplex(mcFecha.SelectionStart.ToShortDateString(),
+                txtCliente.Text, 
+                cboNumeroDuplex.SelectedItem.ToString(), 
+                cboCantidadPersonas.SelectedItem.ToString(),
+                txtPrecio.Text);
+
+            CargarGrillaDuplex(duplex);
 
             // Limpiar los campos después de guardar
             mcFecha.SetDate(DateTime.Now);
@@ -49,6 +52,15 @@ namespace Clase2._2C2025
             cboCantidadPersonas.SelectedIndex = 0;
             txtPrecio.Clear();
 
+        }
+
+        private void CargarGrillaDuplex(Duplex duplex)
+        {
+            dgvDuplex.Rows.Add(duplex.Fecha, 
+                duplex.Cliente, 
+                duplex.NumeroDuplex, 
+                duplex.NumeroPersonas, 
+                duplex.Precio);
         }
 
         private void btnEliminarDuplex_Click(object sender, EventArgs e)
@@ -68,5 +80,10 @@ namespace Clase2._2C2025
             dgvDuplex.Refresh();
         }
 
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            frmAlta frmAlta = new frmAlta();
+            frmAlta.Show();
+        }
     }
 }

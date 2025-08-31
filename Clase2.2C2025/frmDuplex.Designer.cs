@@ -45,7 +45,7 @@ namespace Clase2._2C2025
             Precio = new DataGridViewTextBoxColumn();
             btnActualizar = new Button();
             label4 = new Label();
-            button3 = new Button();
+            btnAlta = new Button();
             btnEliminarDuplex = new Button();
             lblPrecio = new Label();
             txtPrecio = new TextBox();
@@ -115,7 +115,7 @@ namespace Clase2._2C2025
             // 
             // btnGuardarDuplex
             // 
-            btnGuardarDuplex.BackColor = Color.DarkOrange;
+            btnGuardarDuplex.BackColor = Color.MediumSpringGreen;
             btnGuardarDuplex.ForeColor = SystemColors.WindowText;
             btnGuardarDuplex.Location = new Point(490, 188);
             btnGuardarDuplex.Name = "btnGuardarDuplex";
@@ -165,7 +165,7 @@ namespace Clase2._2C2025
             // 
             // btnActualizar
             // 
-            btnActualizar.BackColor = Color.Green;
+            btnActualizar.BackColor = Color.SpringGreen;
             btnActualizar.Location = new Point(631, 188);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(129, 44);
@@ -182,14 +182,16 @@ namespace Clase2._2C2025
             label4.Size = new Size(0, 15);
             label4.TabIndex = 10;
             // 
-            // button3
+            // btnAlta
             // 
-            button3.Location = new Point(490, 37);
-            button3.Name = "button3";
-            button3.Size = new Size(270, 44);
-            button3.TabIndex = 11;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnAlta.BackColor = Color.Lime;
+            btnAlta.Location = new Point(490, 37);
+            btnAlta.Name = "btnAlta";
+            btnAlta.Size = new Size(270, 44);
+            btnAlta.TabIndex = 11;
+            btnAlta.Text = "Dar Alta";
+            btnAlta.UseVisualStyleBackColor = false;
+            btnAlta.Click += btnAlta_Click;
             // 
             // btnEliminarDuplex
             // 
@@ -229,7 +231,7 @@ namespace Clase2._2C2025
             Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
             Controls.Add(btnEliminarDuplex);
-            Controls.Add(button3);
+            Controls.Add(btnAlta);
             Controls.Add(label4);
             Controls.Add(btnActualizar);
             Controls.Add(dgvDuplex);
@@ -259,7 +261,7 @@ namespace Clase2._2C2025
         private DataGridView dgvDuplex;
         private Button btnActualizar;
         private Label label4;
-        private Button button3;
+        private Button btnAlta;
         private DataGridViewTextBoxColumn Fecha;
         private DataGridViewTextBoxColumn NombreDelCliente;
         private DataGridViewTextBoxColumn NumeroDeDuplex;
