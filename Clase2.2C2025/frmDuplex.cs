@@ -38,14 +38,16 @@ namespace Clase2._2C2025
             string cliente = txtCliente.Text;
             string duplex = cboNumeroDuplex.SelectedItem.ToString();
             string cantidad = cboCantidadPersonas.SelectedItem.ToString();
+            string precio = txtPrecio.Text;
 
-            dgvDuplex.Rows.Add(fecha, cliente, duplex, cantidad);
+            dgvDuplex.Rows.Add(fecha, cliente, duplex, cantidad, precio);
 
             // Limpiar los campos después de guardar
             mcFecha.SetDate(DateTime.Now);
             txtCliente.Clear();
             cboNumeroDuplex.SelectedIndex = 0;
             cboCantidadPersonas.SelectedIndex = 0;
+            txtPrecio.Clear();
 
         }
 
@@ -65,5 +67,6 @@ namespace Clase2._2C2025
         {
             dgvDuplex.Refresh();
         }
+
     }
 }

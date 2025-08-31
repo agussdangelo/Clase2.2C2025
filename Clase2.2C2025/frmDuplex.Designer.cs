@@ -42,15 +42,19 @@ namespace Clase2._2C2025
             NombreDelCliente = new DataGridViewTextBoxColumn();
             NumeroDeDuplex = new DataGridViewTextBoxColumn();
             CantidadPersonas = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
             btnActualizar = new Button();
             label4 = new Label();
             button3 = new Button();
             btnEliminarDuplex = new Button();
+            lblPrecio = new Label();
+            txtPrecio = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvDuplex).BeginInit();
             SuspendLayout();
             // 
             // mcFecha
             // 
+            mcFecha.BackColor = SystemColors.Desktop;
             mcFecha.Location = new Point(18, 22);
             mcFecha.Name = "mcFecha";
             mcFecha.TabIndex = 0;
@@ -58,7 +62,7 @@ namespace Clase2._2C2025
             // lblCliente
             // 
             lblCliente.AutoSize = true;
-            lblCliente.Location = new Point(234, 22);
+            lblCliente.Location = new Point(236, 17);
             lblCliente.Name = "lblCliente";
             lblCliente.Size = new Size(110, 15);
             lblCliente.TabIndex = 1;
@@ -66,15 +70,17 @@ namespace Clase2._2C2025
             // 
             // txtCliente
             // 
-            txtCliente.Location = new Point(234, 49);
+            txtCliente.BackColor = Color.LightSkyBlue;
+            txtCliente.Location = new Point(236, 35);
             txtCliente.Name = "txtCliente";
             txtCliente.Size = new Size(232, 23);
             txtCliente.TabIndex = 2;
             // 
             // cboNumeroDuplex
             // 
+            cboNumeroDuplex.BackColor = Color.LightSkyBlue;
             cboNumeroDuplex.FormattingEnabled = true;
-            cboNumeroDuplex.Location = new Point(234, 126);
+            cboNumeroDuplex.Location = new Point(236, 92);
             cboNumeroDuplex.Name = "cboNumeroDuplex";
             cboNumeroDuplex.Size = new Size(232, 23);
             cboNumeroDuplex.TabIndex = 3;
@@ -82,7 +88,7 @@ namespace Clase2._2C2025
             // lblDuplex
             // 
             lblDuplex.AutoSize = true;
-            lblDuplex.Location = new Point(234, 97);
+            lblDuplex.Location = new Point(236, 74);
             lblDuplex.Name = "lblDuplex";
             lblDuplex.Size = new Size(107, 15);
             lblDuplex.TabIndex = 4;
@@ -91,7 +97,7 @@ namespace Clase2._2C2025
             // lblCantidadPersonas
             // 
             lblCantidadPersonas.AutoSize = true;
-            lblCantidadPersonas.Location = new Point(234, 171);
+            lblCantidadPersonas.Location = new Point(236, 127);
             lblCantidadPersonas.Name = "lblCantidadPersonas";
             lblCantidadPersonas.Size = new Size(121, 15);
             lblCantidadPersonas.TabIndex = 6;
@@ -99,27 +105,31 @@ namespace Clase2._2C2025
             // 
             // cboCantidadPersonas
             // 
+            cboCantidadPersonas.BackColor = Color.LightSkyBlue;
             cboCantidadPersonas.FormattingEnabled = true;
             cboCantidadPersonas.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8" });
-            cboCantidadPersonas.Location = new Point(234, 200);
+            cboCantidadPersonas.Location = new Point(236, 147);
             cboCantidadPersonas.Name = "cboCantidadPersonas";
             cboCantidadPersonas.Size = new Size(232, 23);
             cboCantidadPersonas.TabIndex = 5;
             // 
             // btnGuardarDuplex
             // 
+            btnGuardarDuplex.BackColor = Color.DarkOrange;
+            btnGuardarDuplex.ForeColor = SystemColors.WindowText;
             btnGuardarDuplex.Location = new Point(490, 188);
             btnGuardarDuplex.Name = "btnGuardarDuplex";
             btnGuardarDuplex.Size = new Size(129, 44);
             btnGuardarDuplex.TabIndex = 7;
             btnGuardarDuplex.Text = "Guardar Duplex";
-            btnGuardarDuplex.UseVisualStyleBackColor = true;
+            btnGuardarDuplex.UseVisualStyleBackColor = false;
             btnGuardarDuplex.Click += btnGuardarDuplex_Click;
             // 
             // dgvDuplex
             // 
+            dgvDuplex.BackgroundColor = Color.LightCyan;
             dgvDuplex.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDuplex.Columns.AddRange(new DataGridViewColumn[] { Fecha, NombreDelCliente, NumeroDeDuplex, CantidadPersonas });
+            dgvDuplex.Columns.AddRange(new DataGridViewColumn[] { Fecha, NombreDelCliente, NumeroDeDuplex, CantidadPersonas, Precio });
             dgvDuplex.Location = new Point(8, 253);
             dgvDuplex.Name = "dgvDuplex";
             dgvDuplex.Size = new Size(749, 185);
@@ -148,14 +158,20 @@ namespace Clase2._2C2025
             CantidadPersonas.HeaderText = "CantidadPersonas";
             CantidadPersonas.Name = "CantidadPersonas";
             // 
+            // Precio
+            // 
+            Precio.HeaderText = "Precio";
+            Precio.Name = "Precio";
+            // 
             // btnActualizar
             // 
+            btnActualizar.BackColor = Color.Green;
             btnActualizar.Location = new Point(631, 188);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(129, 44);
             btnActualizar.TabIndex = 9;
             btnActualizar.Text = "Actualizar";
-            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.UseVisualStyleBackColor = false;
             btnActualizar.Click += btnActualizar_Click;
             // 
             // label4
@@ -177,19 +193,41 @@ namespace Clase2._2C2025
             // 
             // btnEliminarDuplex
             // 
+            btnEliminarDuplex.BackColor = Color.Red;
+            btnEliminarDuplex.ForeColor = SystemColors.Control;
             btnEliminarDuplex.Location = new Point(490, 126);
             btnEliminarDuplex.Name = "btnEliminarDuplex";
             btnEliminarDuplex.Size = new Size(129, 44);
             btnEliminarDuplex.TabIndex = 12;
             btnEliminarDuplex.Text = "Eliminar Duplex";
-            btnEliminarDuplex.UseVisualStyleBackColor = true;
+            btnEliminarDuplex.UseVisualStyleBackColor = false;
             btnEliminarDuplex.Click += btnEliminarDuplex_Click;
+            // 
+            // lblPrecio
+            // 
+            lblPrecio.AutoSize = true;
+            lblPrecio.Location = new Point(236, 179);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(40, 15);
+            lblPrecio.TabIndex = 13;
+            lblPrecio.Text = "Precio";
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.BackColor = Color.LightSkyBlue;
+            txtPrecio.Location = new Point(236, 200);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(232, 23);
+            txtPrecio.TabIndex = 14;
             // 
             // frmDuplex
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkTurquoise;
             ClientSize = new Size(769, 450);
+            Controls.Add(txtPrecio);
+            Controls.Add(lblPrecio);
             Controls.Add(btnEliminarDuplex);
             Controls.Add(button3);
             Controls.Add(label4);
@@ -229,5 +267,8 @@ namespace Clase2._2C2025
         #endregion
 
         private Button btnEliminarDuplex;
+        private Label lblPrecio;
+        private TextBox txtPrecio;
+        private DataGridViewTextBoxColumn Precio;
     }
 }
